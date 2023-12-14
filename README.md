@@ -7,7 +7,7 @@
   
   <h2>Project Description</h2>
   <p>The focus of this project will be to rewrite basic libc functions in assembly</p>
-    Mandatory Part:
+    <h3>Mandatory Part:</h3>
     <ul>
         <li>ft_strlen</li>
         <li>ft_strlcpy</li>
@@ -16,16 +16,15 @@
         <li>ft_read</li>
         <li>ft_strdup</li>
     </ul>
-    <div style='text-align:left; position:relative'>
-    <img style='position:absolute; right:400; top:35' width="200" src=".readmefiles/Structure.png"/>
-    Bonus Part:
+    <h3>Bonus Part:</h3>
     <ul>
         <li>ft_atoi_base</li>
         <li>ft_list_push_front</li>
         <li>ft_list_size</li>
         <li>ft_list_sort</li>
         <li>ft_list_remove_if</li>
-    </ul></div>
+    <img src=".readmefiles/Structure.png"/>
+    </ul>
   <h2>Project Requirements</h2>
   <ul>
     <li>Must write 64 bits ASM. Beware of the <a href="https://learn.microsoft.com/en-us/cpp/build/x64-calling-convention?view=msvc-170">calling convention</a>.</li>
