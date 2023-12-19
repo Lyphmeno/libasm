@@ -37,5 +37,6 @@
   <ul>
     <li><a href="https://www.ibm.com/docs/en/aix/7.2?topic=aix-assembler-language-reference">Assembler's Documentation</a></li>
     <li><a href="https://www.tutorialspoint.com/assembly_programming/">Learn NASM programming</a></li>
+    <li><a href="[https://www.tutorialspoint.com/assembly_programming/](https://www.youtube.com/playlist?list=PL2EF13wm-hWCoj6tUBGUmrkJmH1972dBB)https://www.youtube.com/playlist?list=PL2EF13wm-hWCoj6tUBGUmrkJmH1972dBB">Learning x86 with NASM playlist</a></li>
 </body>
 </html>
