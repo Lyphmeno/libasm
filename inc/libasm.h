@@ -10,6 +10,7 @@
 #include <errno.h>
 #include <stdio.h>
 
-ssize_t ft_strlen(const char* s);    
+ssize_t     ft_strlen(const char* s);
+char        *ft_strcpy(char *dest, const char *src);
 
 #endif

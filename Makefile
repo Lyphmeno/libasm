@@ -13,7 +13,8 @@ ARFLAGS = rcs
 SRCDIR  := ./srcs
 SRCEXT  := s
 SRC		:= \
-			$(SRCDIR)/ft_strlen.s
+			$(SRCDIR)/ft_strlen.s\
+			$(SRCDIR)/ft_strcpy.s
 
 INCDIR	:=	./inc
 INCEXT	:=	h
