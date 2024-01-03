@@ -14,7 +14,8 @@ SRCDIR  := ./srcs
 SRCEXT  := s
 SRC		:= \
 			$(SRCDIR)/ft_strlen.s\
-			$(SRCDIR)/ft_strcpy.s
+			$(SRCDIR)/ft_strcpy.s\
+			$(SRCDIR)/ft_strcmp.s\
 
 INCDIR	:=	./inc
 INCEXT	:=	h
