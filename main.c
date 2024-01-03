@@ -10,21 +10,21 @@ int main(void)
     printf("\033[0;32m\"test\"\t= %ld\n", ft_strlen("test"));
 
     printf("----------------------STRCPY-----------------------\n");
-    char dest1[] = "test : ";
-    char dest2[] = "test : ";
+    char dest[] = "test : ";
+    char dest0[] = "test : ";
     char src[] = "truc";
-    printf("\033[0;33m%s\n", strcpy(dest1, src));
-    printf("\033[0;32m%s\n", ft_strcpy(dest2, src));
+    printf("\033[0;33m%s\n", strcpy(dest, src));
+    printf("\033[0;32m%s\n", ft_strcpy(dest0, src));
 
     printf("----------------------STRCMP-----------------------\n");
     char dest1[] = "123456";
     char dest2[] = "1234567";
-    printf("\033[0;33m\"equal\"\t= %s\n", strcmp(dest1, dest1));
-    printf("\033[0;32m\"equal\"\t= %s\n", ft_strcmp(dest1, dest1));
-    printf("\033[0;33m\"less\"\t= %s\n", strcmp(dest1, dest2));
-    printf("\033[0;32m\"less\"\t= %s\n", ft_strcmp(dest1, dest2));
-    printf("\033[0;33m\"more\"\t= %s\n", strcmp(dest2, dest1));
-    printf("\033[0;32m\"more\"\t= %s\n", ft_strcmp(dest2, dest1));
+    printf("\033[0;33m\"equal\"\t= %d\n", strcmp(dest1, dest1));
+    printf("\033[0;32m\"equal\"\t= %d\n", ft_strcmp(dest1, dest1));
+    printf("\033[0;33m\"less\"\t= %d\n", strcmp(dest1, dest2));
+    printf("\033[0;32m\"less\"\t= %d\n", ft_strcmp(dest1, dest2));
+    printf("\033[0;33m\"more\"\t= %d\n", strcmp(dest2, dest1));
+    printf("\033[0;32m\"more\"\t= %d\n", ft_strcmp(dest2, dest1));
     printf("\033[0m---------------------------------------------------\n");
     return (0);
 }

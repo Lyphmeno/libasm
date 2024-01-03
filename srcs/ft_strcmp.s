@@ -1,19 +1,23 @@
 ;int         ft_strcmp(const char* str1, const char* str2)
 section .text
     global ft_strcmp
-    extern ft_strlen
 
     ft_strcmp:
-        cmp rdi, rsi
-        je zero
-        jg more
-        jl less
+        xor rcx, rcx
+        xor rax, rax
 
-    zero:
-        ret 0
+    comp:
+        movzx rax, byte [rdi + rcx]
+        cmp byte [rdi + rcx], 0
+        jz end
+        cmp byte [rsi + rcx], 0
+        jz end
+        cmp al, byte [rsi + rcx]
+        jne end
+        inc rcx
+        jmp comp
 
-    less:
-        ret -1
-
-    more:
-        ret 1
+    end:
+        sub al, byte [rsi + rcx]
+        movsx rax, al
+        ret
