@@ -16,6 +16,7 @@ SRC		:= \
 			$(SRCDIR)/ft_strlen.s\
 			$(SRCDIR)/ft_strcpy.s\
 			$(SRCDIR)/ft_strcmp.s\
+			$(SRCDIR)/ft_write.s\
 
 INCDIR	:=	./inc
 INCEXT	:=	h
