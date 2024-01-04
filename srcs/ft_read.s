@@ -1,10 +1,10 @@
-;ssize_t	ft_write(int fd, const void *buf, size_t count)
-section .text
-	global ft_write
-	extern __errno_location
+;ssize_t		ft_read(int fd, void *buf, size_t count)
+section	.text
+	global	ft_read
+	extern	__errno_location
 
-	ft_write:
-		mov rax, 1
+	ft_read:
+		mov rax, 0
 		syscall
 		test rax, rax
 		js error

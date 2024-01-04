@@ -32,12 +32,41 @@ int main(void)
     printf("\033[0;32mmore\t= %d\n", ft_strcmp(dest2, dest1));
 
     printf("\033[0m---------------------WRITE---------------------\n");
-    printf("%ld\n", write(1, "truc\n", 5));
-    printf("%ld\n", ft_write(1, "truc\n", 5));
-    
+	int res = 0;
+	int fd = -1;
+    res = write(1, "truc", 5);
+    printf(" -> %d\n", res);
+    res = ft_write(1, "truc", 5);
+    printf(" -> %d\n", res);
+    res = write(fd, &"c", 1);
+    printf("\033[0;33m%d - %d\n", res, errno);
+    res = ft_write(fd, &"c", 1);
+    printf("\033[0;32m%d - %d\n", res, errno);
+
     printf("\033[0m---------------------READ---------------------\n");
-    printf("\033[0;33m\n");
-    printf("\033[0;32m\n");
+    char buff[10];
+    buff[9] = '\0';
+    fd = open("Makefile", O_RDONLY);
+    printf("\033[0;33m%zd -> %s\n", ft_read(fd, buff, 9), buff);
+    close(fd);
+    fd = open("Makefile", O_RDONLY);
+    printf("\033[0;32m%zd -> %s\n", read(fd, buff, 9), buff);
+    close(fd);
+    fd = -1;
+    printf("\033[0;33m%zd", ft_read(fd, buff, 9));
+    printf(" - %d\n", errno);
+    printf("\033[0;32m%zd", read(fd, buff, 9));
+    printf(" - %d\n", errno);
+
+    printf("\033[0m--------------------STRDUP---------------------\n");
+	char test[] = "Ceci est un test";
+    char *dup = strdup(test);
+    char *dup1 = ft_strdup(test);
+    printf("\033[0;33m%s\n", dup);
+    printf("\033[0;32m%s\n", dup1);
+	free(dup);
+	free(dup1);
+
     printf("\033[0m---------------------------------------------------\n");
     return (0);
 }

@@ -5,7 +5,7 @@ AS		= nasm
 ASFLAGS	= -f elf64
 
 CC		= gcc
-CFLAGS  = -Wall -Wextra -Werror
+CFLAGS  = -Wall -Wextra -Werror -static
 
 AR		= ar
 ARFLAGS = rcs
@@ -17,6 +17,8 @@ SRC		:= \
 			$(SRCDIR)/ft_strcpy.s\
 			$(SRCDIR)/ft_strcmp.s\
 			$(SRCDIR)/ft_write.s\
+			$(SRCDIR)/ft_read.s\
+			$(SRCDIR)/ft_strdup.s\
 
 INCDIR	:=	./inc
 INCEXT	:=	h
