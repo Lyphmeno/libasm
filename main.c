@@ -32,8 +32,8 @@ int main(void)
     printf("\033[0;32mmore\t= %d\n", ft_strcmp(dest2, dest1));
 
     printf("\033[0m---------------------WRITE---------------------\n");
-    write(1, "truc\n", 5);
-    ft_write(2, "truc\n", 5);
+    printf("%ld\n", write(1, "truc\n", 5));
+    printf("%ld\n", ft_write(1, "truc\n", 5));
     
     printf("\033[0m---------------------READ---------------------\n");
     printf("\033[0;33m\n");
