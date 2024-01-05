@@ -1,12 +1,12 @@
-#include "inc/libasm.h"
+#include "../inc/libasm.h"
 
 int main(void)
 {
-    printf("\033[0m---------------------------------------------------\n");
+    printf("\033[0m-------------------MANDATORY-------------------\n");
     printf("\033[0;33mTRUE\n");
     printf("\033[0;32mMINE\n");
 
-    printf("\033[0m----------------------STRLEN---------------------\n");
+    printf("\033[0m--------------------STRLEN---------------------\n");
     printf("\033[0;33m\"test\"\t= %ld\n", strlen("test"));
     printf("\033[0;32m\"test\"\t= %ld\n", ft_strlen("test"));
     printf("\033[0;33m\"\"\t= %ld\n", strlen(""));
@@ -31,7 +31,7 @@ int main(void)
     printf("\033[0;33mmore\t= %d\n", strcmp(dest2, dest1));
     printf("\033[0;32mmore\t= %d\n", ft_strcmp(dest2, dest1));
 
-    printf("\033[0m---------------------WRITE---------------------\n");
+    printf("\033[0m--------------------WRITE----------------------\n");
 	int res = 0;
 	int fd = -1;
     res = write(1, "truc", 5);
@@ -43,7 +43,7 @@ int main(void)
     res = ft_write(fd, &"c", 1);
     printf("\033[0;32m%d - %d\n", res, errno);
 
-    printf("\033[0m---------------------READ---------------------\n");
+    printf("\033[0m--------------------READ-----------------------\n");
     char buff[10];
     buff[9] = '\0';
     fd = open("Makefile", O_RDONLY);
@@ -67,6 +67,6 @@ int main(void)
 	free(dup);
 	free(dup1);
 
-    printf("\033[0m---------------------------------------------------\n");
+    printf("\033[0m-----------------------------------------------\n");
     return (0);
 }

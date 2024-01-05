@@ -11,7 +11,12 @@ section	.text
 		push rdi
 		mov rdi, rax
 		call malloc wrt ..plt
+		js malloc_failed
 		pop rsi
 		mov rdi, rax
 		call ft_strcpy
+		ret
+	
+	malloc_failed:
+		xor rax, rax
 		ret
