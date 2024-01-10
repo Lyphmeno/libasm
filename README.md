@@ -39,5 +39,6 @@
     <li><a href="https://www.tutorialspoint.com/assembly_programming/">Learn NASM programming</a></li>
     <li><a href="https://www.youtube.com/playlist?list=PL2EF13wm-hWCoj6tUBGUmrkJmH1972dBB">Learning x86 with NASM playlist</a></li>
     <li><a href="https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/">Linux System Call Table</a></li>
+    <li><a href="https://www.cs.uaf.edu/2017/fall/cs301/reference/x86_64.html">Cheat Sheet</a></li>
 </body>
 </html>
