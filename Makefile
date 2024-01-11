@@ -26,6 +26,8 @@ SRCB		:= \
 				$(SRCDIRB)/ft_atoi_base.s\
 				$(SRCDIRB)/ft_list_push_front.s\
 				$(SRCDIRB)/ft_list_size.s\
+				$(SRCDIRB)/ft_list_sort.s\
+				$(SRCDIRB)/ft_list_remove_if.s\
 
 INCDIR		:=	inc
 INCEXT		:=	h
