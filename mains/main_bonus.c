@@ -5,17 +5,18 @@ int print_list(t_list *list)
 	int i;
 	t_list *tmp;
 
-	i = 0;
-	tmp = list;
 	if (!list)
 		return printf("\033[0;33mEmpty list\n");
+	tmp = list;
+	i = ft_list_size(tmp) - 1;
+	printf("\033[32m----BACK-----\n");
 	while (tmp)
 	{
-		printf("\033[0;32mlist -> %s\n", (char *)tmp->data);
+		printf("\033[0;32mlist[%d] -> %s\n", i, (char *)tmp->data);
 		tmp = tmp->next;
-		i++;
+		i--;
 	}
-
+	printf("\033[32m----FRONT----\n");
 	return 0;
 }
 
@@ -36,11 +37,15 @@ int main(void)
 	printf("\033[0m----------------FT_LIST_PUSH_FRONT---------------\n");
 	t_list *lst = NULL;
 	print_list(lst);
-	ft_list_push_front(&lst, "poisson");
-	ft_list_push_front(&lst, "un");
-	ft_list_push_front(&lst, "suis");
-	ft_list_push_front(&lst, "Je");
+	ft_list_push_front(&lst, "d");
+	ft_list_push_front(&lst, "c");
+	ft_list_push_front(&lst, "b");
+	ft_list_push_front(&lst, "a");
 	print_list(lst);
+	printf("\033[0m-------------------FT_LIST_SIZE------------------\n");
+	t_list *lstEmpty = NULL;
+	printf("\033[0;33msize of lstEmpty\t= %d\n", ft_list_size(lstEmpty));
+	printf("\033[0;32msize of lst\t\t= %d\n", ft_list_size(lst));
 	printf("\033[0m-------------------------------------------------\n");
 	return (0);
 }

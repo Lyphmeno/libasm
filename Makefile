@@ -25,6 +25,7 @@ SRCDIRB		:= srcs_bonus
 SRCB		:= \
 				$(SRCDIRB)/ft_atoi_base.s\
 				$(SRCDIRB)/ft_list_push_front.s\
+				$(SRCDIRB)/ft_list_size.s\
 
 INCDIR		:=	inc
 INCEXT		:=	h
