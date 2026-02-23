@@ -1,3 +1,4 @@
+;char		*ft_strcpy(char *dest, const char *src);
 BITS 64
 
 section .text

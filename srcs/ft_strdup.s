@@ -1,4 +1,6 @@
 ;char		*ft_strdup(const char *str1)
+BITS 64
+
 section	.text
 	global ft_strdup
 	extern ft_strlen
@@ -20,3 +22,5 @@ section	.text
 	malloc_failed:
 		xor rax, rax
 		ret
+
+section .note.GNU-stack

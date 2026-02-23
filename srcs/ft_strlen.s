@@ -1,3 +1,4 @@
+;ssize_t		ft_strlen(const char* s);
 BITS 64
 
 section .text

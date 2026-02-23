@@ -1,3 +1,4 @@
+;ssize_t		ft_write(int fd, const void *buf, size_t count);
 BITS 64
 
 section .text
