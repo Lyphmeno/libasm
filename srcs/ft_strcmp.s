@@ -1,23 +1,29 @@
-;int	ft_strcmp(const char* str1, const char* str2)
+BITS 64
+
 section .text
-	global ft_strcmp
+  global ft_strcmp
 
-	ft_strcmp:
-		xor rcx, rcx
-		xor rax, rax
+ft_strcmp:
+  xor rax, rax
 
-	comp:
-		movzx rax, byte [rdi + rcx]
-		cmp byte [rdi + rcx], 0
-		jz end
-		cmp byte [rsi + rcx], 0
-		jz end
-		cmp al, byte [rsi + rcx]
-		jne end
-		inc rcx
-		jmp comp
+  .loop:
+    mov dl, [rdi + rax]
+    mov cl, [rsi + rax]
+    cmp dl, cl
+    je .equal
+    movzx eax, dl
+    movzx ecx, cl
+    sub eax, ecx
+    ret
 
-	end:
-		sub al, byte [rsi + rcx]
-		movsx rax, al
-		ret
+  .equal:
+    test dl, dl
+    je .end
+    inc rax
+    jmp .loop
+
+  .end:
+    xor rax, rax
+    ret
+
+section .note.GNU-stack

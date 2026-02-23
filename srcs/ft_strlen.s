@@ -1,14 +1,18 @@
-;ssize_t	ft_strlen(const char* s)
+BITS 64
+
 section .text
-	global ft_strlen
-	ft_strlen:
-		xor rax, rax
+  global ft_strlen
 
-	index:
-		cmp byte [rdi + rax], 0
-		je end
-		inc rax
-		jmp index
+ft_strlen:
+  xor rax, rax
 
-	end:
-		ret 
+.loop:
+  cmp byte [rdi + rax], 0
+  je .end
+  inc rax
+  jmp .loop
+
+.end:
+  ret
+
+section .note.GNU-stack
